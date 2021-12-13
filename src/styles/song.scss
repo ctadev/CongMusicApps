@@ -1,0 +1,51 @@
+.song-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+  img {
+    border-radius: 50%;
+    width: 30%;
+    object-fit: cover;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 1300px) {
+    img {
+      width: 35%;
+    }
+  }
+  @media (max-width: 1000px) {
+    img {
+      width: 45%;
+    }
+  }
+  @media (max-width: 800px) {
+    img {
+      width: 55%;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 650px) {
+    img {
+      width: 65%;
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      width: 75%;
+    }
+  }
+}

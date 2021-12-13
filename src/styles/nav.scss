@@ -1,0 +1,48 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(66, 66, 66);
+    padding: 15px;
+    font-size: 1.5rem;
+    &:hover {
+      background: rgb(66, 66, 66);
+      color: white;
+    }
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 1300px) {
+    h1 {
+      font-size: 3rem;
+    }
+    button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    button {
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+  }
+}
+@media (max-width: 450px) {
+  nav {
+    flex-direction: column;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

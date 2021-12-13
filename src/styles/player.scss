@@ -1,0 +1,30 @@
+.player-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 100vw;
+  .timer {
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    input {
+      margin: 0 1rem;
+      width: 100%;
+      padding: 0 0;
+    }
+  }
+  .musicButtons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    .backward {
+      transform: rotate(180deg);
+    }
+    p {
+      font-size: 2rem;
+      margin: 0 2rem;
+    }
+  }
+}

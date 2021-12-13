@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/app.scss";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import Song from "./components/Song";
+import Player from "./components/Player";
+import MusicList from "./components/MusicList";
+import CurrentSongs from "./redux/currentSongSlice";
+import PlayingSlice from "./redux/playingSlice";
+import Nav from "./components/Nav";
+import { useState } from "react";
+
+const store = configureStore({
+  reducer: {
+    currentSongs: CurrentSongs,
+    isPlaying: PlayingSlice,
+  },
+});
 
 function App() {
+  const [libraryStatus, setlibraryStatus] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Nav
+          libraryStatus={libraryStatus}
+          setlibraryStatus={setlibraryStatus}
+        />
+        <Song />
+        <Player />
+        <MusicList
+          libraryStatus={libraryStatus}
+          setlibraryStatus={setlibraryStatus}
+        />
+      </div>
+    </Provider>
   );
 }
 

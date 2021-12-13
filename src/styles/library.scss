@@ -1,0 +1,29 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: rgb(163, 228, 212);
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5 ease;
+  opacity: 0;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+}
+
+.library.show {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media (max-width: 450px) {
+  .library.show {
+    top: 10%;
+  }
+}

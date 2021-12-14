@@ -4,15 +4,45 @@ nav {
   justify-content: space-around;
   align-items: center;
   button {
-    background: transparent;
+    position: relative;
+    background: #111;
     border: none;
+    border-radius: 50%;
+    outline: none;
+    color: white;
     cursor: pointer;
-    border: 2px solid rgb(66, 66, 66);
-    padding: 15px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    padding: 20px;
     font-size: 1.5rem;
     &:hover {
-      background: rgb(66, 66, 66);
-      color: white;
+      z-index: 1;
+      animation: glow 8s linear infinite;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+      border-radius: 50px;
+      filter: blur(20px);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    &:hover:before {
+      opacity: 1;
+      z-index: -1;
+    }
+    @keyframes glow {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 400%;
+      }
     }
   }
   h1 {

@@ -11,6 +11,17 @@
   img {
     width: 30%;
   }
+  @media (max-width: 450px) {
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 15%;
+    }
+  }
 }
 
 .selected {

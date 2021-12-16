@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  width: 100vw;
+  min-height: 70vh;
+  min-width: 100vw;
+
   .image.pause {
     animation-play-state: paused;
   }
@@ -12,6 +13,7 @@
     animation-play-state: running;
   }
   img {
+    padding-top: 5px;
     border-radius: 50%;
     width: 30%;
     object-fit: cover;
@@ -97,34 +99,9 @@ h2 {
 p {
   font-size: 1.5rem;
 }
-@media (max-width: 1300px) {
-  img {
-    width: 35%;
-  }
-}
-@media (max-width: 1000px) {
-  img {
-    width: 45%;
-  }
-}
-@media (max-width: 800px) {
-  img {
-    width: 55%;
-  }
+
+@media (max-width: 600px) {
   h2 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 650px) {
-  img {
-    width: 65%;
-  }
-}
-@media (max-width: 500px) {
-  img {
-    width: 75%;
+    font-size: 1.8rem;
   }
 }

@@ -19,15 +19,20 @@
   p {
     font-size: 1.2rem;
   }
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .library.show {
   transform: translateX(0%);
   opacity: 1;
 }
-
 @media (max-width: 450px) {
   .library.show {
     top: 10%;
+    width: 100vw;
   }
 }
